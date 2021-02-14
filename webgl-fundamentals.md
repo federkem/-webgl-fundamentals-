@@ -4,20 +4,29 @@ TOC: Fundamentals
 
 
 WebGL (Web Graphics Library) is often thought of as a 3D API. People think "I'll use WebGL and *magic* I'll get cool 3d".
-In reality [WebGL is just a rasterization engine](webgl-2d-vs-3d-library.html). It draws points, lines, and triangles based
-on code you supply. Getting WebGL to do anything else is up to you to provide code to use
+In reality [WebGL is just a rasterization engine](webgl-2d-vs-3d-library.html).
+It draws points, lines, and triangles based on code you supply.
+Getting WebGL to do anything else is up to you to provide code to use
 [points, lines, and triangles](webgl-points-lines-triangles.html) to accomplish your task.
 
-WebGL (Web Graphics Library) wird oft als eine 3D-API angesehen. Die Leute denken "Ich benutze WebGL und zaubere mir cooles 3D".
+WebGL (Web Graphics Library) wird oft als eine 3D-API angesehen. Die Leute denken "Ich benutze WebGL und *Magie* ich bekomme cooles 3D".
 In Wirklichkeit ist [WebGL nur eine Rasterisierungs-Engine](webgl-2d-vs-3d-library.html).
 Sie zeichnet Punkte, Linien und Dreiecke basierend auf dem von Ihnen gelieferten Code.
-Um WebGL dazu zu bringen, etwas anderes zu tun, müssen Sie Code bereitstellen, der [Punkte, Linien und Dreiecke](webgl-points-lines-triangles.html) verwendet, um Ihre Aufgabe zu erfüllen.
+Um WebGL dazu zu bringen, etwas anderes zu tun, müssen Sie Code bereitstellen, der [Punkte, Linien und Dreiecke](webgl-points-lines-triangles.html) verwendet,
+um Ihre Aufgabe zu erfüllen.
 
 
 WebGL runs on the GPU on your computer. As such you need to provide the code that runs on that GPU.
 You provide that code in the form of pairs of functions. Those 2 functions are called a vertex shader
 and a fragment shader and they are each written in a very strictly typed C/C++ like language called
 [GLSL](webgl-shaders-and-glsl.html). (GL Shader Language). Paired together they are called a *program*.
+
+WebGL wird auf dem Grafikprozessor Ihres Computers ausgeführt. Daher müssen Sie den Code bereitstellen,
+der auf dem Grafikprozessor ausgeführt wird. Sie stellen diesen Code in Form von Funktionspaaren bereit.
+Diese zwei Funktionen werden Vertex-Shader und Fragment-Shader genannt und sie sind jeweils in einer sehr
+streng typisierten C/C++-ähnlichen Sprache namens [GLSL](webgl-shaders-and-glsl.html) geschrieben.
+(GL Shader Language). Zusammen gepaart werden sie als Programm bezeichnet.
+
 
 A vertex shader's job is to compute vertex positions. Based on the positions the function outputs
 WebGL can then rasterize various kinds of primitives including
